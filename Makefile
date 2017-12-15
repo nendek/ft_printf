@@ -6,7 +6,7 @@
 #    By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/15 17:28:03 by pnardozi          #+#    #+#              #
-#    Updated: 2017/12/15 19:48:39 by pnardozi         ###   ########.fr        #
+#    Updated: 2017/12/15 20:45:13 by pnardozi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,17 +59,17 @@ LIB = libft/libft.a
 
 INCLUDES = .
 
+COMPILE_LIB = make -C ./libft/
+
 RED = \033[31m
 GREEN = \033[32m
 END = \033[0m
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	make -C libft/
-	ar rc tmp.a $(OBJ)
-	ar rc $(NAME) tmp.a $(LIB)
-	rm -rf tmp.a
+$(NAME):$(OBJ)
+	$(COMPILE_LIB)
+	ar rc $(NAME) $(LIB)
 	@echo "$(GREEN)PRINTF READY$(END)"
 
 %.o: %.c
