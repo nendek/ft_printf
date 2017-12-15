@@ -73,11 +73,16 @@ static void	ft_remp_right_two(char *str, t_param param, long long var)
 
 	i = 0;
 	if (param.precision >= (int)param.width \
-			|| param.precision > ft_count_var(var))
+			|| param.precision >= ft_count_var(var))
 		ft_remp_right_preci(str, param, var);
+	if (param.precision <= ft_count_var(var) && ft_is_in(param.flags, '0')\
+			&& param.precision >= 0 && (ft_is_in(param.flags, '+') == 0))
+		while (str[i] == '0' && str[i] != '\0')
+			str[i++] = ' ';
+	i = 0;
 	if (var == 0 && param.precision == 0)
 		while (str[i] != '\0')
-			str[i++] = ' ';
+			str[i++] = ' ';	
 }
 
 void		ft_remp_right(char *str, long long var, int i, t_param param)
