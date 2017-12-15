@@ -6,7 +6,7 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:32:02 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 17:48:55 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/15 19:26:47 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ static void	ft_remp_right_preci_two(char *str, t_param param, int i, int j)
 {
 	while (i >= 0 && j < (int)param.width)
 	{
+		if (str[i] != '-')
+			str[i--] = ' ';
 		str[i--] = ' ';
 		param.width--;
 	}
