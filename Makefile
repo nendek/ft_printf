@@ -6,7 +6,7 @@
 #    By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/15 17:28:03 by pnardozi          #+#    #+#              #
-#    Updated: 2017/12/15 17:28:04 by pnardozi         ###   ########.fr        #
+#    Updated: 2017/12/15 19:48:39 by pnardozi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,7 +68,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	make -C libft/
 	ar rc tmp.a $(OBJ)
-	libtool -static -o $(NAME) tmp.a $(LIB)
+	ar rc $(NAME) tmp.a $(LIB)
 	rm -rf tmp.a
 	@echo "$(GREEN)PRINTF READY$(END)"
 
