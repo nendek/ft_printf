@@ -6,7 +6,7 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:29:22 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 19:36:01 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/15 19:38:48 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ static char				*ft_flags_d(long long var, t_param param)
 		i++;
 	if (var == 0 && param.precision == 0 && param.width == 0)
 		return (str);
-	if (((ft_is_in(param.flags, '+') || ft_is_in(param.flags, ' ')) \
-				&& var >= 0) && (param.precision >= (int)param.width ||\
-					((int)param.width <= ft_count_var(var) && param.precision == -1)))
+	if (((ft_is_in(param.flags, '+') || ft_is_in(param.flags, ' ')) &&\
+		var >= 0) && (param.precision >= (int)param.width ||\
+			((int)param.width <= ft_count_var(var) && param.precision == -1)))
 		i++;
 	if (!(str = malloc(sizeof(int) * i + 1)))
 		return (NULL);
