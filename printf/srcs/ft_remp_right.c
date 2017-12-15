@@ -82,7 +82,7 @@ static void	ft_remp_right_two(char *str, t_param param, long long var)
 	i = 0;
 	if (var == 0 && param.precision == 0)
 		while (str[i] != '\0')
-			str[i++] = ' ';	
+			str[i++] = ' ';
 }
 
 void		ft_remp_right(char *str, long long var, int i, t_param param)
