@@ -6,13 +6,13 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:32:02 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 17:32:03 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/15 17:48:55 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void		ft_remp_right_birm(long long var, int j, char *str, char *param)
+static void	ft_remp_right_birm(long long var, int j, char *str, char *param)
 {
 	if (var < 0)
 		str[j++] = '0';
@@ -28,7 +28,7 @@ static void		ft_remp_right_birm(long long var, int j, char *str, char *param)
 		str[j] = '0';
 }
 
-static void		ft_remp_right_preci_two(char *str, t_param param, int i, int j)
+static void	ft_remp_right_preci_two(char *str, t_param param, int i, int j)
 {
 	while (i >= 0 && j < (int)param.width)
 	{
@@ -37,7 +37,7 @@ static void		ft_remp_right_preci_two(char *str, t_param param, int i, int j)
 	}
 }
 
-static void		ft_remp_right_preci(char *str, t_param param, long long var)
+static void	ft_remp_right_preci(char *str, t_param param, long long var)
 {
 	int		i;
 	int		j;
@@ -65,7 +65,7 @@ static void		ft_remp_right_preci(char *str, t_param param, long long var)
 	ft_remp_right_preci_two(str, param, i, j);
 }
 
-static void		ft_remp_right_two(char *str, t_param param, long long var)
+static void	ft_remp_right_two(char *str, t_param param, long long var)
 {
 	int		i;
 

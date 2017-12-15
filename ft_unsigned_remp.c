@@ -6,13 +6,13 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:33:55 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 17:33:59 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/15 17:44:52 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void		ft_remp_unsigned_right_preci2(char *str,\
+static void	ft_remp_unsigned_right_preci2(char *str,\
 		t_param param, int i, int j)
 {
 	while (i >= 0 && j < (int)param.width)

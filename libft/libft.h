@@ -6,7 +6,7 @@
 /*   By: pnardozi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 16:07:14 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 16:00:35 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/15 17:39:18 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char				*ft_long_itoa(long long n);
 void				ft_putlong(long long n);
 void				ft_puttab(char **str);
 void				ft_strcap(char *s);
-char				*ft_unsigned_itoa( unsigned long int n);
+char				*ft_unsigned_itoa(unsigned long int n);
 int					ft_wputchar(int c);
 void				*ft_memset(void *s, int c, size_t n);
 void				ft_bzero(void *s, size_t n);

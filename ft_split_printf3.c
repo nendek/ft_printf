@@ -6,7 +6,7 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:33:29 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 17:33:31 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/15 17:45:59 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,8 @@ static void	ft_strsplit_printf3(char **tab, int **ret, char *s, int *size_word)
 	ret[i] = NULL;
 }
 
-static int	ft_strsplit_printf2(char *s, char ***tab, int ***ret, int **size_word)
+static int	ft_strsplit_printf2(char *s, char ***tab, int ***ret,\
+		int **size_word)
 {
 	int nb_word;
 

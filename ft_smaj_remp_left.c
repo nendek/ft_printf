@@ -6,13 +6,13 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:32:48 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 17:32:50 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/15 17:48:02 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void		ft_remp_smaj_left_bis(int j, int *str, int *tmp, t_param param)
+static void	ft_remp_smaj_left_bis(int j, int *str, int *tmp, t_param param)
 {
 	while (j < param.precision && tmp[j] != 0)
 	{

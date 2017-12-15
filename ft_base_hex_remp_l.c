@@ -6,13 +6,13 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:28:14 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 17:28:16 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/15 17:54:15 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void		ft_remp_hex_left_two(char *str, t_param param)
+static void	ft_remp_hex_left_two(char *str, t_param param)
 {
 	if (param.precision >= (int)param.width)
 		ft_remp_left_preci(str);
@@ -20,7 +20,7 @@ static void		ft_remp_hex_left_two(char *str, t_param param)
 		ft_remp_left_hex(str, param);
 }
 
-void			ft_remp_hex_left(char *str, \
+void		ft_remp_hex_left(char *str, \
 		int i, t_param param, unsigned long long int var)
 {
 	char	*ret;

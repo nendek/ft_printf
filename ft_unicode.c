@@ -6,7 +6,7 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:33:42 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 17:33:44 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/15 17:44:04 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ static int		ft_four(char *str)
 	return (i);
 }
 
-static char	*ft_bin(int nb)
+static char		*ft_bin(int nb)
 {
 	char	*ret;
 	int		i;
@@ -115,7 +115,7 @@ static char	*ft_bin(int nb)
 	return (ret);
 }
 
-int		ft_unicode(int c)
+int				ft_unicode(int c)
 {
 	char	*str;
 	int		ret;

@@ -6,7 +6,7 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:31:00 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 17:31:02 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/15 17:51:00 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ static unsigned long long int	var_modifier_x(unsigned long long int var, \
 		return ((unsigned int)ret);
 }
 
-static void						ft_flags_two(char *str, unsigned long long int var, \
-		t_param param, int i)
+static void						ft_flags_two(char *str,\
+		unsigned long long int var, t_param param, int i)
 {
 	if (ft_is_in(param.flags, '-'))
 		ft_remp_hex_left(str, i, param, var);
@@ -46,8 +46,8 @@ static void						ft_flags_two(char *str, unsigned long long int var, \
 		ft_remp_hex_right(str, i, param, var);
 }
 
-static char							*ft_flags_x(char *str, unsigned long long int var, \
-		t_param param)
+static char						*ft_flags_x(char *str,\
+		unsigned long long int var, t_param param)
 {
 	int		i;
 	char	*tmp;

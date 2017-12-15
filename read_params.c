@@ -6,13 +6,13 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:35:00 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 17:35:01 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/15 17:42:37 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int		ft_ismodifier(char c)
+static int	ft_ismodifier(char c)
 {
 	int i;
 
@@ -26,7 +26,7 @@ static int		ft_ismodifier(char c)
 	return (0);
 }
 
-static int			ft_flag(char *str, int *i, t_param *param)
+static int	ft_flag(char *str, int *i, t_param *param)
 {
 	int		j;
 
@@ -50,7 +50,7 @@ static int			ft_flag(char *str, int *i, t_param *param)
 	return (1);
 }
 
-static int		ft_modifier(char *str, int *i, t_param *param)
+static int	ft_modifier(char *str, int *i, t_param *param)
 {
 	int		j;
 
@@ -77,7 +77,7 @@ static int		ft_modifier(char *str, int *i, t_param *param)
 	return (1);
 }
 
-static int		ft_conv(char *str, int *i, t_param *param, int *verif)
+static int	ft_conv(char *str, int *i, t_param *param, int *verif)
 {
 	int		j;
 
@@ -105,7 +105,7 @@ static int		ft_conv(char *str, int *i, t_param *param, int *verif)
 		return (1);
 }
 
-int		ft_read_param(char *str, int *i, t_param *param, int *verif)
+int			ft_read_param(char *str, int *i, t_param *param, int *verif)
 {
 	int		j;
 

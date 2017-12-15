@@ -6,7 +6,7 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:31:23 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 17:31:26 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/15 17:54:57 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ typedef struct		s_norme
 }					t_norme;
 
 int					ft_printf(const char *restrict format, ...);
-void		ft_remp_left_preci_two(char *str, t_param param);
+void				ft_remp_left_preci_two(char *str, t_param param);
 int					ft_count_and_print(int **tab, int k, char *str);
 int					ft_print_error2(t_norme *i, char *str, int **tab);
 int					ft_printf_error3(t_norme *i, char *str, int **tab);

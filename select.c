@@ -6,7 +6,7 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:35:11 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 17:35:15 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/15 17:41:42 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ static int		ft_select_conv_two(int *str, int *i, t_param *param, int *verif)
 	return (1);
 }
 
-int		*ft_select_conv(va_list *ap, int *str, int *verif)
+int				*ft_select_conv(va_list *ap, int *str, int *verif)
 {
 	int		i;
 	int		j;

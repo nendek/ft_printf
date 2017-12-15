@@ -6,7 +6,7 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:34:43 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 17:34:44 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/15 17:40:14 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ static void	ft_place(int **tab, int *i, char *str, va_list *ap)
 	free(tmp);
 }
 
-static int			ft_printf_three(int **tab, char *str, t_norme i, int l)
+static int	ft_printf_three(int **tab, char *str, t_norme i, int l)
 {
 	if (ft_verif_before_print(tab, i.i, str, &l) == -1)
 	{
@@ -74,7 +74,7 @@ static int			ft_printf_three(int **tab, char *str, t_norme i, int l)
 	return (i.nb);
 }
 
-static void		ft_printf_two(t_norme *i, int *l)
+static void	ft_printf_two(t_norme *i, int *l)
 {
 	*l = 0;
 	(*i).i = 0;

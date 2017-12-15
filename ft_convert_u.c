@@ -6,14 +6,14 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:30:49 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 17:30:50 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/15 17:53:37 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static unsigned long long int	var_unsigned_maj_modifier(unsigned long long int var, \
-		t_param param)
+static unsigned long long int	var_unsigned_maj_modifier(\
+		unsigned long long int var, t_param param)
 {
 	unsigned long long int ret;
 
@@ -37,10 +37,8 @@ static unsigned long long int	var_unsigned_maj_modifier(unsigned long long int v
 		return ((unsigned long int)ret);
 }
 
-
-
-static unsigned long long int	var_unsigned_modifier(unsigned long long int var, \
-		t_param param)
+static unsigned long long int	var_unsigned_modifier(\
+		unsigned long long int var, t_param param)
 {
 	unsigned long long int ret;
 
@@ -64,7 +62,7 @@ static unsigned long long int	var_unsigned_modifier(unsigned long long int var, 
 		return ((unsigned int)ret);
 }
 
-static char							*ft_flags_u(unsigned long long int var, \
+static char						*ft_flags_u(unsigned long long int var, \
 		t_param param)
 {
 	int		i;

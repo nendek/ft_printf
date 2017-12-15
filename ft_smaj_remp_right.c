@@ -6,7 +6,7 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:33:01 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 17:33:03 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/15 17:46:34 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ static void	ft_remp_smaj_right_preci_two(int *str, int *i, t_param param)
 		str[(*i)--] = ' ';
 }
 
-static void	ft_remp_smaj_right_widht_two(int *str, int *tmp, t_param param, int j)
+static void	ft_remp_smaj_right_widht_two(int *str, int *tmp, t_param param,\
+		int j)
 {
 	j = 0;
 	while (param.precision > 0)

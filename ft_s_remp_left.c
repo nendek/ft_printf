@@ -6,13 +6,13 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:32:20 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 17:32:21 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/15 17:48:17 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void		ft_remp_s_left_bis(int j, char *str, char *tmp, t_param param)
+static void	ft_remp_s_left_bis(int j, char *str, char *tmp, t_param param)
 {
 	while (j < param.precision && tmp[j] != '\0')
 	{

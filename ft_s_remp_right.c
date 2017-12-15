@@ -6,7 +6,7 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:32:29 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 17:32:30 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/15 17:46:57 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,8 @@ static void	ft_remp_s_right_width(char *str, char *tmp, int i, t_param param)
 		ft_remp_s_right_widht_two(str, &i, param);
 }
 
-static void	ft_remp_s_right_preci_two(char *str, char *tmp, t_param param, int j)
+static void	ft_remp_s_right_preci_two(char *str, char *tmp, t_param param,\
+		int j)
 {
 	j = 0;
 	while (param.precision > 0)

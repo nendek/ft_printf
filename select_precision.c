@@ -6,26 +6,12 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:35:28 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 17:35:29 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/15 17:41:20 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-/*static int			ft_isflag(char c)
-{
-	int		i;
-
-	i = 0;
-	while (i < 5)
-	{
-		if (g_tab_flags[i] == c)
-			return (1);
-		i++;
-	}
-	return (0);
-}
-*/
 static char	*ft_precision_bis(char *str, int *i)
 {
 	int		j;

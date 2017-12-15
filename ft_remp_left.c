@@ -6,13 +6,13 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:31:43 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 17:31:45 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/15 17:49:13 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void		ft_remp_left_two(char *str, t_param param)
+static void	ft_remp_left_two(char *str, t_param param)
 {
 	if (param.precision >= (int)param.width)
 		ft_remp_left_preci(str);
