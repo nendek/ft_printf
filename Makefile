@@ -170,7 +170,7 @@ $(NAME): $(COMPILED)
 	ar rc $(LIB) $(LIBFT_OBJ)
 	ranlib $(LIB)
 	@echo "$(GREEN)LIBFT READY$(END)"
-	ar rc $(NAME) $(PRINTF_OBJ) $(LIB)
+	ar rc $(NAME) $(PRINTF_OBJ) $(LIBFT_OBJ)
 	ranlib $(NAME)
 	@echo "$(GREEN)PRINTF READY$(END)"
 
