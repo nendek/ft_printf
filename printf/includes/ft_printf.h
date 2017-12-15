@@ -109,7 +109,7 @@ int					*ft_convert_c(va_list *ap, t_param param);
 int					*ft_convert_cmaj(va_list *ap, t_param param);
 int					*ft_convert_percent(va_list *ap, t_param param);
 
-static char			g_base_oct[9] =
+char			g_base_oct[9] =
 {
 	'0',
 	'1',
@@ -122,7 +122,7 @@ static char			g_base_oct[9] =
 	'\0'
 };
 
-static char			g_null[] =
+char			g_null[] =
 {
 	'(',
 	'n',
@@ -133,7 +133,7 @@ static char			g_null[] =
 	'\0'
 };
 
-static char			g_tab_char[] =
+char			g_tab_char[] =
 {
 	's',
 	'S',
@@ -153,7 +153,7 @@ static char			g_tab_char[] =
 	'\0'
 };
 
-static char			g_tab_flags[5] =
+char			g_tab_flags[5] =
 {
 	'#',
 	'0',
@@ -162,7 +162,7 @@ static char			g_tab_flags[5] =
 	' '
 };
 
-static char			g_tab_modifier[4] =
+char			g_tab_modifier[4] =
 {
 	'h',
 	'l',
@@ -170,7 +170,7 @@ static char			g_tab_modifier[4] =
 	'z',
 };
 
-static int			*(*g_tab_ptrf[])(va_list *ap, t_param param) =
+int			*(*g_tab_ptrf[])(va_list *ap, t_param param) =
 {
 	ft_convert_s,
 	ft_convert_smaj,
@@ -189,7 +189,7 @@ static int			*(*g_tab_ptrf[])(va_list *ap, t_param param) =
 	ft_convert_percent,
 };
 
-static char			g_base_hex[17] =
+char			g_base_hex[17] =
 {
 	'0',
 	'1',
@@ -210,7 +210,7 @@ static char			g_base_hex[17] =
 	'\0'
 };
 
-static char			g_ret_two[17] =
+char			g_ret_two[17] =
 {
 	'1',
 	'1',
@@ -231,7 +231,7 @@ static char			g_ret_two[17] =
 	'\0'
 };
 
-static char			g_ret_three[25] =
+char			g_ret_three[25] =
 {
 	'1',
 	'1',
@@ -260,7 +260,7 @@ static char			g_ret_three[25] =
 	'\0'
 };
 
-static char			g_ret_four[33] =
+char			g_ret_four[33] =
 {
 	'1',
 	'1',

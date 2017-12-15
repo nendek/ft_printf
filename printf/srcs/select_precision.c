@@ -35,10 +35,8 @@ static char	*ft_precision_bis(char *str, int *i)
 
 int			ft_precision(char *str, int *i, t_param *param)
 {
-	int		j;
 	char	*ret;
 
-	j = 0;
 	while (str[*i] != '\0')
 		(*i)++;
 	while (*i >= 0)

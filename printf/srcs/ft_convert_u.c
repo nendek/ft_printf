@@ -88,11 +88,9 @@ static char						*ft_flags_u(unsigned long long int var, \
 int								*ft_convert_u(va_list *ap, t_param param)
 {
 	unsigned long long int	var;
-	int						i;
 	char					*str;
 	int						*ret;
 
-	i = 0;
 	if (param.precision < -2)
 		return (0);
 	var = va_arg(*ap, unsigned long long int);
@@ -108,10 +106,8 @@ int								*ft_convert_umaj(va_list *ap, t_param param)
 {
 	char					*str;
 	int						*ret;
-	int						i;
 	unsigned long long int	var;
 
-	i = 0;
 	if (param.precision < -2)
 		return (0);
 	var = va_arg(*ap, unsigned long long int);
