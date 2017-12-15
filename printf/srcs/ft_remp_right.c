@@ -34,7 +34,6 @@ static void	ft_remp_right_preci_two(char *str, t_param param, int i, int j)
 	{
 		if (str[i] != '-')
 			str[i--] = ' ';
-		str[i--] = ' ';
 		param.width--;
 	}
 }
