@@ -12,20 +12,6 @@
 
 #include "get_next_line.h"
 
-static int			ft_eol(char const *s, int c)
-{
-	int	i;
-
-	i = 0;
-	if (s)
-	{
-		while (s[i] != '\0' && s[i] != (char)c && s[i] != EOF)
-			i++;
-		return (i);
-	}
-	return (0);
-}
-
 static int			copy(int fd, char **save, char *tmp)
 {
 	char	*l;
@@ -104,11 +90,11 @@ int					get_next_line(const int fd, char **line)
 		*line = NULL;
 		return (0);
 	}
-	if (!(*line = ft_strnew(ft_eol(list->data, '\n'))))
+	if (!(*line = ft_strnew(ft_is_in(list->data, '\n'))))
 		return (-1);
-	ft_strncpy(*line, list->data, (ft_eol(list->data, '\n')));
-	if (!(tmp = ft_strsub(list->data, ft_eol(list->data, '\n') + 1 \
-					, ft_strlen_p(list->data) - ft_eol(list->data, '\n'))))
+	ft_strncpy(*line, list->data, (ft_is_in(list->data, '\n')));
+	if (!(tmp = ft_strsub(list->data, ft_is_in(list->data, '\n') + 1 \
+					, ft_strlen_p(list->data) - ft_is_in(list->data, '\n'))))
 		return (-1);
 	ft_strdel(&(list->data));
 	if (!(list->data = ft_strnew(ft_strlen_p(tmp))))
