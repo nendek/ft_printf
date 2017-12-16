@@ -25,7 +25,7 @@ PRINTF_INCLUDES_PATH = ./printf/includes/
 PRINTF_OBJ_PATH = ./printf/obj/
 
 LIBFT_SRCS_NAME = ft_atoi.c \
-		  ft_is_in.c \
+		  ft_is_in_at.c \
 		  ft_itoc.c \
 		  ft_count_var.c \
 		  ft_wputchar.c \

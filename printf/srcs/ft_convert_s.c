@@ -30,7 +30,7 @@ static char	*ft_flags_s(char *str, t_param param)
 		i = param.width;
 	if (!(str = ft_strnew(i)))
 		return (NULL);
-	if (ft_is_in(param.flags, '-'))
+	if (ft_is_in_at(param.flags, '-', 5))
 		ft_remp_s_left(str, tmp, i, param);
 	else
 		ft_remp_s_right(str, tmp, i, param);
@@ -56,7 +56,7 @@ static char	*ft_string_one(t_param param)
 	(param.precision >= 0) ? (j = (int)param.width - param.precision) :\
 						(j = param.width - 6);
 	while (k < j && k < i)
-		if (ft_is_in(param.flags, '0'))
+		if (ft_is_in_at(param.flags, '0', 5))
 			str[k++] = '0';
 		else
 			str[k++] = ' ';
@@ -88,7 +88,7 @@ static char	*ft_string_two(t_param param)
 		k++;
 	}
 	while (k < i.i)
-		if (ft_is_in(param.flags, '0'))
+		if (ft_is_in_at(param.flags, '0', 5))
 			str[k++] = '0';
 		else
 			str[k++] = ' ';
@@ -97,7 +97,7 @@ static char	*ft_string_two(t_param param)
 
 static char	*ft_string_null(t_param param)
 {
-	if (ft_is_in(param.flags, '-'))
+	if (ft_is_in_at(param.flags, '-', 5))
 		return (ft_string_two(param));
 	else
 		return (ft_string_one(param));

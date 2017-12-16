@@ -43,7 +43,7 @@ static char		*ft_flags_p(char *str, unsigned long long int var, \
 		i = (int)param.width;
 	if (i < param.precision)
 		i = param.precision;
-	if ((ft_is_in(param.flags, '#')) &&\
+	if ((ft_is_in_at(param.flags, '#', 5)) &&\
 			(i == (int)ft_strlen(str) || i == param.precision))
 		i += 2;
 	free(str);
@@ -51,7 +51,7 @@ static char		*ft_flags_p(char *str, unsigned long long int var, \
 		return (NULL);
 	if (!(ft_strcpy_p(str, tmp)))
 		return (NULL);
-	if (ft_is_in(param.flags, '-'))
+	if (ft_is_in_at(param.flags, '-', 5))
 		ft_remp_hex_left(str, i, param, var);
 	else
 		ft_remp_hex_right(str, i, param, var);

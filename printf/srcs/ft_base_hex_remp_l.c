@@ -31,7 +31,7 @@ void		ft_remp_hex_left(char *str, \
 	k = 0;
 	if (!(ret = ft_strdup(str)))
 		return ;
-	if (ft_is_in(param.flags, '#') && (var != 0 || param.conv == 'p'))
+	if (ft_is_in_at(param.flags, '#', 5) && (var != 0 || param.conv == 'p'))
 	{
 		str[j++] = '0';
 		str[j++] = 'x';

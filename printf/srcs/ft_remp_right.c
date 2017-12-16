@@ -18,11 +18,11 @@ static void	ft_remp_right_birm(long long var, int j, char *str, char *param)
 		str[j++] = '0';
 	while (j > 0)
 		str[j--] = '0';
-	if (((ft_is_in(param, '+')) && var >= 0))
+	if (((ft_is_in_at(param, '+', 5)) && var >= 0))
 		str[j] = '+';
 	else if (var < 0)
 		str[j] = '-';
-	else if (ft_is_in(param, ' '))
+	else if (ft_is_in_at(param, ' ', 5))
 		str[j] = ' ';
 	else
 		str[j] = '0';
@@ -59,7 +59,7 @@ static void	ft_remp_right_preci(char *str, t_param param, long long var)
 		i--;
 		param.precision--;
 	}
-	if (ft_is_in(param.flags, '+'))
+	if (ft_is_in_at(param.flags, '+', 5))
 		str[i--] = '+';
 	if (var < 0 && str[i] == ' ')
 		str[i--] = '-';
@@ -74,8 +74,8 @@ static void	ft_remp_right_two(char *str, t_param param, long long var)
 	if (param.precision >= (int)param.width \
 			|| param.precision >= ft_count_var(var))
 		ft_remp_right_preci(str, param, var);
-	if (param.precision <= ft_count_var(var) && ft_is_in(param.flags, '0')\
-			&& param.precision >= 0 && (ft_is_in(param.flags, '+') == 0))
+	if (param.precision <= ft_count_var(var) && ft_is_in_at(param.flags, '0', 5)\
+			&& param.precision >= 0 && (ft_is_in_at(param.flags, '+', 5) == 0))
 		while (str[i] == '0' && str[i] != '\0')
 			str[i++] = ' ';
 	i = 0;
@@ -99,11 +99,11 @@ void		ft_remp_right(char *str, long long var, int i, t_param param)
 	while (k >= 0)
 		str[j--] = ret[k--];
 	free(ret);
-	if (ft_is_in(param.flags, '0') && param.width > 0)
+	if (ft_is_in_at(param.flags, '0', 5) && param.width > 0)
 		ft_remp_right_birm(var, j, str, param.flags);
 	else
 	{
-		if (((ft_is_in(param.flags, '+')) && var >= 0))
+		if (((ft_is_in_at(param.flags, '+', 5)) && var >= 0))
 			str[j--] = '+';
 		while (j >= 0)
 			str[j--] = ' ';

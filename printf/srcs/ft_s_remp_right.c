@@ -14,7 +14,7 @@
 
 static void	ft_remp_s_right_widht_two(char *str, int *i, t_param param)
 {
-	if (ft_is_in(param.flags, '0'))
+	if (ft_is_in_at(param.flags, '0', 5))
 		str[(*i)--] = '0';
 	else
 		str[(*i)--] = ' ';
@@ -34,7 +34,7 @@ static void	ft_remp_s_right_width(char *str, char *tmp, int i, t_param param)
 	{
 		if (tmp[j] != '\0')
 			str[i] = tmp[j];
-		if (ft_is_in(param.flags, '0') && tmp[0] == '\0')
+		if (ft_is_in_at(param.flags, '0', 5) && tmp[0] == '\0')
 			str[i] = '0';
 		else if (tmp[0] == '\0')
 			str[i] = ' ';
@@ -98,7 +98,7 @@ void		ft_remp_s_right_bis(char *str, char *tmp, int i, t_param param)
 	{
 		while (j < (int)param.width)
 		{
-			if (ft_is_in(param.flags, '0'))
+			if (ft_is_in_at(param.flags, '0', 5))
 				str[j] = '0';
 			else
 				str[j] = ' ';

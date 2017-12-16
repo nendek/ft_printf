@@ -23,7 +23,7 @@ void		ft_remp_unsigned_left(char *str, unsigned long long int var, \
 	k = 0;
 	if (!(ret = ft_unsigned_itoa(var)))
 		return ;
-	if (ft_is_in(param.flags, '#') && (param.conv == 'o' || param.conv == 'O'))
+	if (ft_is_in_at(param.flags, '#', 5) && (param.conv == 'o' || param.conv == 'O'))
 		str[j++] = '0';
 	while (ret[k] != '\0')
 	{

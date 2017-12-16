@@ -55,7 +55,7 @@ static void		ft_remp_hex_right_three(char *str, \
 	int		i;
 
 	i = 0;
-	if (ft_is_in(param.flags, '#') && (var != 0 || param.conv == 'p'))
+	if (ft_is_in_at(param.flags, '#', 5) && (var != 0 || param.conv == 'p'))
 		param.precision += 2;
 	if (param.precision >= (int)param.width \
 			|| param.precision > ft_count_var(var))
@@ -63,20 +63,20 @@ static void		ft_remp_hex_right_three(char *str, \
 	if (var == 0 && param.precision == 0)
 		while (str[i] != '\0')
 			str[i++] = ' ';
-	if (var == 0 && param.precision == 0 && ft_is_in(param.flags, '#'))
+	if (var == 0 && param.precision == 0 && ft_is_in_at(param.flags, '#', 5))
 		str[0] = '0';
 	i = 0;
-	if (ft_is_in(param.flags, '#') && (var != 0 || param.conv == 'p'))
+	if (ft_is_in_at(param.flags, '#', 5) && (var != 0 || param.conv == 'p'))
 		ft_remp_hex_right_four(str, i);
 }
 
 static void		ft_remp_hex_right_two(char *str, int j, t_param param,\
 		unsigned long long int var)
 {
-	if (ft_is_in(param.flags, '0') && param.precision == -1)
+	if (ft_is_in_at(param.flags, '0', 5) && param.precision == -1)
 	{
 		ft_remp_unsigned_right_birm(j, str);
-		if (ft_is_in(param.flags, '#') && var != 0)
+		if (ft_is_in_at(param.flags, '#', 5) && var != 0)
 		{
 			while (ft_isdigit(str[j]) && j >= 0)
 				j--;
@@ -88,7 +88,7 @@ static void		ft_remp_hex_right_two(char *str, int j, t_param param,\
 	{
 		while (j >= 0)
 			str[j--] = ' ';
-		if (ft_is_in(param.flags, '#') && (var != 0 || param.conv == 'p'))
+		if (ft_is_in_at(param.flags, '#', 5) && (var != 0 || param.conv == 'p'))
 		{
 			j = 0;
 			while (str[j] == ' ')

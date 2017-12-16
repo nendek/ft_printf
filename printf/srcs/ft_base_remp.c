@@ -36,7 +36,7 @@ void			ft_remp_base_left(char *str, \
 	k = 0;
 	if (!(ret = ft_strdup(str)))
 		return ;
-	if (ft_is_in(param.flags, '#') && var != 0)
+	if (ft_is_in_at(param.flags, '#', 5) && var != 0)
 		str[j++] = '0';
 	while (ret[k] != '\0')
 	{
@@ -70,9 +70,9 @@ void			ft_remp_base_right(char *str, \
 	while (k >= 0)
 		str[j--] = ret[k--];
 	free(ret);
-	if (ft_is_in(param.flags, '#') && var != 0)
+	if (ft_is_in_at(param.flags, '#', 5) && var != 0)
 		str[j--] = '0';
-	if (ft_is_in(param.flags, '0') && param.precision == -1)
+	if (ft_is_in_at(param.flags, '0', 5) && param.precision == -1)
 		ft_remp_unsigned_right_birm(j, str);
 	else
 	{

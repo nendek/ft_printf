@@ -28,7 +28,7 @@ static void	ft_remp_percent_right(char *str, int i, t_param param)
 	j = 0;
 	while (j < i)
 	{
-		if (ft_is_in(param.flags, '0'))
+		if (ft_is_in_at(param.flags, '0', 5))
 			str[j++] = '0';
 		else
 			str[j++] = ' ';
@@ -51,7 +51,7 @@ static char	*ft_flags_percent(char *str, t_param param)
 		return (NULL);
 	if (!(ft_strcpy_p(str, tmp)))
 		return (NULL);
-	if (ft_is_in(param.flags, '-'))
+	if (ft_is_in_at(param.flags, '-', 5))
 		ft_remp_percent_left(str, i);
 	else
 		ft_remp_percent_right(str, i, param);

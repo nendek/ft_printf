@@ -78,7 +78,7 @@ static char						*ft_flags_u(unsigned long long int var, \
 		return (str);
 	if (!(str = ft_strnew(i)))
 		return (NULL);
-	if (ft_is_in(param.flags, '-'))
+	if (ft_is_in_at(param.flags, '-', 5))
 		ft_remp_unsigned_left(str, var, i, param);
 	else
 		ft_remp_unsigned_right(str, var, i, param);

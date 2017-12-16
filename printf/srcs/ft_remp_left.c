@@ -30,9 +30,9 @@ void		ft_remp_left(char *str, long long var, int i, t_param param)
 	k = 0;
 	if (!(ret = ft_long_itoa(var)))
 		return ;
-	if (((ft_is_in(param.flags, '+')) && var >= 0))
+	if (((ft_is_in_at(param.flags, '+', 5)) && var >= 0))
 		str[j++] = '+';
-	else if (((ft_is_in(param.flags, ' ')) && var >= 0))
+	else if (((ft_is_in_at(param.flags, ' ', 5)) && var >= 0))
 		str[j++] = ' ';
 	while (ret[k] != '\0')
 	{

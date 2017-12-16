@@ -35,8 +35,8 @@ static int	ft_flag(char *str, int *i, t_param *param)
 	{
 		if (j > 4)
 			return (1);
-		if (ft_is_in(g_tab_flags, str[*i]) == 1 &&\
-				ft_is_in(param->flags, str[*i]) == 0)
+		if (ft_is_in_at(g_tab_flags, str[*i], 5) == 1 &&\
+				ft_is_in_at(param->flags, str[*i], 5) == 0)
 		{
 			param->flags[j] = str[*i];
 			if (str[*i] == '0' && (ft_isdigit(str[*i - 1]) \

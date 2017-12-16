@@ -28,13 +28,13 @@ static char				*ft_flags_d(long long var, t_param param)
 		i++;
 	if (var == 0 && param.precision == 0 && param.width == 0)
 		return (str);
-	if (((ft_is_in(param.flags, '+') || ft_is_in(param.flags, ' ')) &&\
+	if (((ft_is_in_at(param.flags, '+', 5) || ft_is_in_at(param.flags, ' ', 5)) &&\
 		var >= 0) && (param.precision >= (int)param.width ||\
 			((int)param.width <= ft_count_var(var) && param.precision == -1)))
 		i++;
 	if (!(str = malloc(sizeof(int) * i + 1)))
 		return (NULL);
-	if (ft_is_in(param.flags, '-'))
+	if (ft_is_in_at(param.flags, '-', 5))
 		ft_remp_left(str, var, i, param);
 	else
 		ft_remp_right(str, var, i, param);
@@ -73,12 +73,12 @@ int						*ft_convert_d(va_list *ap, t_param param)
 
 	var = va_arg(*ap, long long int);
 	var = var_modifier(var, param);
-	if (var == 0 && (ft_is_in(param.flags, ' ') || ft_is_in(param.flags, '+'))\
+	if (var == 0 && (ft_is_in_at(param.flags, ' ', 5) || ft_is_in_at(param.flags, '+', 5))\
 			&& param.precision <= 0 && param.width < 1)
 	{
 		if (!(str = ft_strnew(2)))
 			return (NULL);
-		if (ft_is_in(param.flags, '+'))
+		if (ft_is_in_at(param.flags, '+', 5))
 			str[0] = '+';
 		else
 			str[0] = ' ';
@@ -102,12 +102,12 @@ int						*ft_convert_dmaj(va_list *ap, t_param param)
 	if (param.precision < -2)
 		return (0);
 	var = va_arg(*ap, long long int);
-	if (var == 0 && (ft_is_in(param.flags, ' ') || ft_is_in(param.flags, '+'))\
+	if (var == 0 && (ft_is_in_at(param.flags, ' ', 5) || ft_is_in_at(param.flags, '+', 5))\
 			&& param.precision <= 0 && param.width < 1)
 	{
 		if (!(str = ft_strnew(2)))
 			return (NULL);
-		if (ft_is_in(param.flags, '+'))
+		if (ft_is_in_at(param.flags, '+', 5))
 			str[0] = '+';
 		else
 			str[0] = ' ';

@@ -22,7 +22,7 @@ static int		*ft_last_two(t_param param)
 		return (NULL);
 	param.width--;
 	while (i < (int)param.width)
-		if (ft_is_in(param.flags, '0'))
+		if (ft_is_in_at(param.flags, '0', 5))
 			ret[i++] = '0';
 		else
 			ret[i++] = ' ';
@@ -41,7 +41,7 @@ static int		*ft_last_one(t_param param, int *verif)
 	ret[i] = verif[0];
 	i++;
 	while (i < (int)param.width)
-		if (ft_is_in(param.flags, '0'))
+		if (ft_is_in_at(param.flags, '0', 5))
 			ret[i++] = '0';
 		else
 			ret[i++] = ' ';
@@ -58,7 +58,7 @@ static int		*ft_last_one(t_param param, int *verif)
 
 static int		*ft_last(t_param param, int *verif)
 {
-	if (ft_is_in(param.flags, '-'))
+	if (ft_is_in_at(param.flags, '-', 5))
 		return (ft_last_one(param, verif));
 	else
 		return (ft_last_two(param));

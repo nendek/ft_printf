@@ -92,7 +92,7 @@ void		ft_remp_smaj_right(int *str, int *tmp, int i, t_param param)
 		}
 		while (i >= 0)
 		{
-			if (ft_is_in(param.flags, '0'))
+			if (ft_is_in_at(param.flags, '0', 5))
 				str[i--] = '0';
 			else
 				str[i--] = ' ';

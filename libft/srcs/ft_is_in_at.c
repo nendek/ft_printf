@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-int			ft_is_in(char *str, char c)
+int			ft_is_in_at(char *str, char c, int length)
 {
 	int i;
 
 	i = 0;
-	while (i < 5)
+	while (i < length)
 	{
 		if (str[i] == c)
 			return (1);

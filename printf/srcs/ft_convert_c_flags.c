@@ -30,7 +30,7 @@ static void	ft_remp_c_right(int *str, int i, t_param param)
 	c = str[0];
 	while (j < i)
 	{
-		if (ft_is_in(param.flags, '0'))
+		if (ft_is_in_at(param.flags, '0', 5))
 			str[j++] = '0';
 		else
 			str[j++] = ' ';
@@ -52,7 +52,7 @@ int			*ft_flags_c(int c, t_param param)
 		return (NULL);
 	str[i] = 0;
 	str[0] = c;
-	if (ft_is_in(param.flags, '-'))
+	if (ft_is_in_at(param.flags, '-', 5))
 		ft_remp_c_left(str, i);
 	else
 		ft_remp_c_right(str, i, param);

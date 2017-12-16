@@ -40,7 +40,7 @@ static unsigned long long int	var_modifier_x(unsigned long long int var, \
 static void						ft_flags_two(char *str,\
 		unsigned long long int var, t_param param, int i)
 {
-	if (ft_is_in(param.flags, '-'))
+	if (ft_is_in_at(param.flags, '-', 5))
 		ft_remp_hex_left(str, i, param, var);
 	else
 		ft_remp_hex_right(str, i, param, var);
@@ -60,9 +60,9 @@ static char						*ft_flags_x(char *str,\
 	if (i < param.precision)
 		i = param.precision;
 	if (var == 0 && param.precision == 0 && param.width == 0 \
-			&& (ft_is_in(param.flags, '#')))
+			&& (ft_is_in_at(param.flags, '#', 5)))
 		return (str);
-	if (var != 0 && (ft_is_in(param.flags, '#'))\
+	if (var != 0 && (ft_is_in_at(param.flags, '#', 5))\
 			&& (i == (int)ft_strlen(str) || i == param.precision))
 		i += 2;
 	free(str);

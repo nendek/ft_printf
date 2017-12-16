@@ -67,7 +67,7 @@ void		ft_remp_s_right(char *str, char *tmp, int i, t_param param)
 		}
 		while (i >= 0)
 		{
-			if (ft_is_in(param.flags, '0'))
+			if (ft_is_in_at(param.flags, '0', 5))
 				str[i--] = '0';
 			else
 				str[i--] = ' ';

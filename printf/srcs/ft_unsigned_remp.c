@@ -67,7 +67,7 @@ void		ft_remp_unsigned_right_bis(char *str, \
 	if (var == 0 && param.precision == 0)
 		while (str[i] != '\0')
 			str[i++] = ' ';
-	if (var == 0 && param.precision == 0 && ft_is_in(param.flags, '#'))
+	if (var == 0 && param.precision == 0 && ft_is_in_at(param.flags, '#', 5))
 	{
 		if (param.width > 0)
 			str[param.width - 1] = '0';
@@ -77,7 +77,7 @@ void		ft_remp_unsigned_right_bis(char *str, \
 	if (var == 0 && param.precision == -1 && param.width > 1\
 			&& (param.conv == 'o' || param.conv == 'O'))
 	{
-		if (ft_is_in(param.flags, '0'))
+		if (ft_is_in_at(param.flags, '0', 5))
 			str[0] = '0';
 		else
 			str[0] = ' ';
@@ -100,9 +100,9 @@ void		ft_remp_unsigned_right(char *str, unsigned long long int var, \
 	while (k >= 0)
 		str[j--] = ret[k--];
 	free(ret);
-	if (ft_is_in(param.flags, '#'))
+	if (ft_is_in_at(param.flags, '#', 5))
 		str[j--] = '0';
-	if (ft_is_in(param.flags, '0') && param.precision == -1)
+	if (ft_is_in_at(param.flags, '0', 5) && param.precision == -1)
 		ft_remp_unsigned_right_birm(j, str);
 	else
 	{

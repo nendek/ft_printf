@@ -33,7 +33,7 @@ int		*ft_flags_smaj(int *str, t_param param)
 	if (!(str = malloc(sizeof(int) * i + 1)))
 		return (NULL);
 	str[i] = 0;
-	if (ft_is_in(param.flags, '-'))
+	if (ft_is_in_at(param.flags, '-', 5))
 		ft_remp_smaj_left(str, tmp, i, param);
 	else
 		ft_remp_smaj_right(str, tmp, i, param);
