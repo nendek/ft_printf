@@ -75,7 +75,7 @@ static t_gnl_list	*ft_list(t_gnl_list **begin_list, int fd, char *tmp)
 	return (ajout);
 }
 
-int					get_next_line(const int fd, char **line)
+int					get_next_line_multi(const int fd, char **line)
 {
 	static t_gnl_list	*list;
 	char				*tmp;
@@ -90,11 +90,11 @@ int					get_next_line(const int fd, char **line)
 		*line = NULL;
 		return (0);
 	}
-	if (!(*line = ft_strnew(ft_is_in(list->data, '\n'))))
+	if (!(*line = ft_strnew(ft_is_in_pos(list->data, '\n'))))
 		return (-1);
-	ft_strncpy(*line, list->data, (ft_is_in(list->data, '\n')));
-	if (!(tmp = ft_strsub(list->data, ft_is_in(list->data, '\n') + 1 \
-					, ft_strlen_p(list->data) - ft_is_in(list->data, '\n'))))
+	ft_strncpy(*line, list->data, (ft_is_in_pos(list->data, '\n')));
+	if (!(tmp = ft_strsub(list->data, ft_is_in_pos(list->data, '\n') + 1 \
+					, ft_strlen_p(list->data) - ft_is_in_pos(list->data, '\n'))))
 		return (-1);
 	ft_strdel(&(list->data));
 	if (!(list->data = ft_strnew(ft_strlen_p(tmp))))

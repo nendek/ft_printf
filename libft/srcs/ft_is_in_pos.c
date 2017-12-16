@@ -1,7 +1,7 @@
 
 #include "get_next_line.h"
 
-int	ft_is_in(char const *s, int c)
+int	ft_is_in_pos(char const *s, int c)
 {
 	int	i;
 

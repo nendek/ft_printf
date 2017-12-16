@@ -20,12 +20,16 @@
 # define BUFF_SIZE 32
 # include "libft.h"
 
+#
+
 typedef	struct		s_gnl
 {
 	char			*data;
 	int				fd;
 	struct s_gnl	*next;
 }					t_gnl_list;
-int					get_next_line(const int fd, char **line);
+
+int					get_next_line_multi(const int fd, char **line);
+int					get_next_line_one_file(const int fd, char **line);
 
 #endif
