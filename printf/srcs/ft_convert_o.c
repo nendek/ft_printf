@@ -6,7 +6,7 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:29:42 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 17:29:43 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/17 14:47:05 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,17 +80,16 @@ static char						*ft_flags_o(char *str, \
 	if (var == 0 && param.precision == 0 && param.width == 0 \
 			&& (ft_is_in_at(param.flags, '#', 5) == 0))
 		return (str);
-	if ((var != 0 && (ft_is_in_at(param.flags, '#', 5)) && i == (int)ft_strlen(str))\
-			|| (var == 0 && ft_is_in_at(param.flags, '#', 5) && param.precision == 0))
+	if ((var != 0 && (ft_is_in_at(param.flags, '#', 5)) &&\
+				i == (int)ft_strlen(str)) || (var == 0 &&\
+				ft_is_in_at(param.flags, '#', 5) && param.precision == 0))
 		i++;
 	free(str);
 	if (!(str = ft_strnew(i)))
 		return (NULL);
 	ft_strcpy_p(str, tmp);
-	if (ft_is_in_at(param.flags, '-', 5))
-		ft_remp_base_left(str, i, param, var);
-	else
-		ft_remp_base_right(str, i, param, var);
+	ft_is_in_at(param.flags, '-', 5) ? ft_remp_base_left(str, i, param, var)\
+		: ft_remp_base_right(str, i, param, var);
 	free(tmp);
 	return (str);
 }

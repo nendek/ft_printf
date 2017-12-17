@@ -6,7 +6,7 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:29:22 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 19:38:48 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/17 14:54:03 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ static char				*ft_flags_d(long long var, t_param param)
 		i++;
 	if (var == 0 && param.precision == 0 && param.width == 0)
 		return (str);
-	if (((ft_is_in_at(param.flags, '+', 5) || ft_is_in_at(param.flags, ' ', 5)) &&\
-		var >= 0) && (param.precision >= (int)param.width ||\
+	if (((ft_is_in_at(param.flags, '+', 5) || ft_is_in_at(param.flags, ' ', 5))\
+				&& var >= 0) && (param.precision >= (int)param.width ||\
 			((int)param.width <= ft_count_var(var) && param.precision == -1)))
 		i++;
 	if (!(str = malloc(sizeof(int) * i + 1)))
@@ -73,8 +73,9 @@ int						*ft_convert_d(va_list *ap, t_param param)
 
 	var = va_arg(*ap, long long int);
 	var = var_modifier(var, param);
-	if (var == 0 && (ft_is_in_at(param.flags, ' ', 5) || ft_is_in_at(param.flags, '+', 5))\
-			&& param.precision <= 0 && param.width < 1)
+	if (var == 0 && (ft_is_in_at(param.flags, ' ', 5) || \
+		ft_is_in_at(param.flags, '+', 5)) && param.precision <= 0 &&\
+			param.width < 1)
 	{
 		if (!(str = ft_strnew(2)))
 			return (NULL);
@@ -102,15 +103,14 @@ int						*ft_convert_dmaj(va_list *ap, t_param param)
 	if (param.precision < -2)
 		return (0);
 	var = va_arg(*ap, long long int);
-	if (var == 0 && (ft_is_in_at(param.flags, ' ', 5) || ft_is_in_at(param.flags, '+', 5))\
-			&& param.precision <= 0 && param.width < 1)
+	if (var == 0 && (ft_is_in_at(param.flags, ' ', 5) ||\
+		ft_is_in_at(param.flags, '+', 5)) &&\
+			param.precision <= 0 && param.width < 1)
 	{
 		if (!(str = ft_strnew(2)))
 			return (NULL);
-		if (ft_is_in_at(param.flags, '+', 5))
-			str[0] = '+';
-		else
-			str[0] = ' ';
+		ft_is_in_at(param.flags, '+', 5) ? (str[0] = '+') :\
+			(str[0] = '-');
 		if (param.precision == -1)
 			str[1] = '0';
 	}

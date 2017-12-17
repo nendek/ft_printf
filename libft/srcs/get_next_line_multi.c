@@ -6,7 +6,7 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/27 13:40:17 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/11/29 15:56:11 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/17 14:57:45 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ int					get_next_line_multi(const int fd, char **line)
 		return (-1);
 	ft_strncpy(*line, list->data, (ft_is_in_pos(list->data, '\n')));
 	if (!(tmp = ft_strsub(list->data, ft_is_in_pos(list->data, '\n') + 1 \
-					, ft_strlen_p(list->data) - ft_is_in_pos(list->data, '\n'))))
+			, ft_strlen_p(list->data) - ft_is_in_pos(list->data, '\n'))))
 		return (-1);
 	ft_strdel(&(list->data));
 	if (!(list->data = ft_strnew(ft_strlen_p(tmp))))

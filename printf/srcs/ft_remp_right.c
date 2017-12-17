@@ -6,7 +6,7 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:32:02 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 19:26:47 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/17 14:55:08 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,8 @@ static void	ft_remp_right_two(char *str, t_param param, long long var)
 	if (param.precision >= (int)param.width \
 			|| param.precision >= ft_count_var(var))
 		ft_remp_right_preci(str, param, var);
-	if (param.precision <= ft_count_var(var) && ft_is_in_at(param.flags, '0', 5)\
+	if (param.precision <= ft_count_var(var) &&\
+		ft_is_in_at(param.flags, '0', 5)\
 			&& param.precision >= 0 && (ft_is_in_at(param.flags, '+', 5) == 0))
 		while (str[i] == '0' && str[i] != '\0')
 			str[i++] = ' ';

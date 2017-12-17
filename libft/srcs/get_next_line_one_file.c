@@ -6,19 +6,19 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 10:00:12 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/01 10:06:07 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/17 14:59:36 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int	get_next_line_one_file(const int fd, char **line)
+int		get_next_line_one_file(const int fd, char **line)
 {
 	static char	*save;
 	char		*tmp;
 	char		*buf;
-	int		end;
-	
+	int			end;
+
 	end = 1;
 	while (!(ft_eol(save)) && end != 0)
 	{
@@ -32,12 +32,11 @@ int	get_next_line_one_file(const int fd, char **line)
 		ft_strdel(&tmp);
 		ft_strdel(&buf);
 	}
-	*line = ft_strsub(save, 0 , ft_is_in_pos(save, '\n'));
+	*line = ft_strsub(save, 0, ft_is_in_pos(save, '\n'));
 	tmp = ft_strsub(save, ft_is_in_pos(save, '\n') + 1, ft_strlen_p(save));
 	ft_strdel(&save);
 	save = ft_strdup(tmp);
 	ft_strdel(&tmp);
-	if (end > 0)
-		end = 1;
+	end > 0 ? end = 1 : end;
 	return (end);
 }

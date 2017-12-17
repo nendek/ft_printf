@@ -6,7 +6,7 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:34:06 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 17:34:06 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/17 14:55:37 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ void		ft_remp_unsigned_left(char *str, unsigned long long int var, \
 	k = 0;
 	if (!(ret = ft_unsigned_itoa(var)))
 		return ;
-	if (ft_is_in_at(param.flags, '#', 5) && (param.conv == 'o' || param.conv == 'O'))
+	if (ft_is_in_at(param.flags, '#', 5) &&\
+			(param.conv == 'o' || param.conv == 'O'))
 		str[j++] = '0';
 	while (ret[k] != '\0')
 	{

@@ -6,7 +6,7 @@
 /*   By: pnardozi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 16:07:14 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/15 17:39:18 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/17 15:00:13 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-int				ft_eol(char *str);
-int				ft_is_in_pos(char const *s, int c);
+int					ft_eol(char *str);
+int					ft_is_in_pos(char const *s, int c);
 char				*ft_itoc(int *str);
 int					ft_count_var(long long var);
 int					ft_is_in_at(char *str, char c, int lentgth);

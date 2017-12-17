@@ -6,7 +6,7 @@
 /*   By: pnardozi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 18:25:52 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/11/12 17:57:45 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/17 14:57:15 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ char	*ft_strdup(const char *s)
 		dest[i] = '\0';
 		return (dest);
 	}
-	return(0);
+	return (0);
 }
