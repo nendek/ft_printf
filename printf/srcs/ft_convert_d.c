@@ -6,7 +6,7 @@
 /*   By: pnardozi <pnardozi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/15 17:29:22 by pnardozi          #+#    #+#             */
-/*   Updated: 2017/12/17 14:54:03 by pnardozi         ###   ########.fr       */
+/*   Updated: 2017/12/17 15:27:27 by pnardozi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,8 +109,8 @@ int						*ft_convert_dmaj(va_list *ap, t_param param)
 	{
 		if (!(str = ft_strnew(2)))
 			return (NULL);
-		ft_is_in_at(param.flags, '+', 5) ? (str[0] = '+') :\
-			(str[0] = '-');
+		ft_is_in_at(param.flags, '+', 5) ? (str[0] = '+')\
+			: (str[0] = ' ');
 		if (param.precision == -1)
 			str[1] = '0';
 	}
